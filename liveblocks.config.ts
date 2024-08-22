@@ -5,7 +5,7 @@ import {
   LiveObject,
 } from "@liveblocks/client";
 import { createRoomContext } from "@liveblocks/react";
-import { Layer } from "./types/canvas";
+import { Color, Layer } from "./types/canvas";
 
 export const client = createClient({
   throttle: 16,
@@ -18,6 +18,8 @@ export const client = createClient({
 type Presence = {
   cursor: { x: number; y: number } | null;
   selection: string[];
+  pencilDraft: [x: number, y: number, pressure: number][] | null;
+  penColor: Color | null;
 };
 
 type UserMeta = {
@@ -70,6 +72,7 @@ export const {
     useOthersConnectionIds,
     useOther,
     useMutation,
+    useOthersMapped,
 
     // Other hooks
     // ...}

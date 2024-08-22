@@ -21,7 +21,6 @@ export const NewBoardButton = ({ orgId, disabled }: NewBoardButtonProps) => {
       title: "Untitled",
     })
       .then((id) => {
-        console.log(id);
         toast.success("Board Created");
         router.push(`/board/${id}`);
       })

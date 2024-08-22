@@ -48,7 +48,6 @@ export type TextLayer = {
   height: number;
   width: number;
   fill: Color;
-
   value?: string;
 };
 export type NoteLayer = {
@@ -106,7 +105,7 @@ export type CanvasState =
     }
   | {
       mode: CanvasMode.Pressing;
-      orgin: Point;
+      origin: Point;
     }
   | {
       mode: CanvasMode.Resizing;
